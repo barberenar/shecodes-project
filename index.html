@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://kit.fontawesome.com/cf8d8f3900.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&family=Open+Sans+Condensed:wght@700&display=swap"
+        rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>The Weather App</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="appName shadow-sm p-3 mb-5 bg-white rounded">
+            The Weather App
+        </h2>
+        <section class="searchBox">
+            <form>
+                <div class="row">
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="City" aria-label="Search for a city"
+                            id="city" />
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-primary btn-block" id="search">
+                            Search
+                        </button>
+                    </div>
+                    <div class="col-3">
+                        <button type="submit" class="btn btn-success btn-block" id="geoTarget">
+                            Current City
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </section>
+        <header>
+            <h4 id="time">Sunday, 10:00</h4>
+            <i class="fa-solid fa-cloud-sun"></i>
+            <h1 class="title" id="city-title">
+                Managua
+            </h1>
+            <span class="temperature" id="temperature">19</span>
+            <span class="units">
+                <a id="celsius-link">°C</a>
+            </span>
+        </header>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mon</h5>
+                        <i class="fa-solid fa-sun"></i>
+                        <p class="card-text">32°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tue</h5>
+                        <i class="fa-solid fa-sun"></i>
+                        <p class="card-text">32°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Wed</h5>
+                        <i class="fa-solid fa-sun"></i>
+                        <p class="card-text">33°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Thu</h5>
+                        <i class="fa-solid fa-cloud"></i>
+                        <p class="card-text">33°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Fri</h5>
+                        <i class="fa-solid fa-cloud"></i>
+                        <p class="card-text">32°</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
+    </div>
+    <script src="src/index.js"></script>
+</body>
+
+</html>

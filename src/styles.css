@@ -1,0 +1,57 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+}
+h1 {
+  font-size: 50px;
+}
+h4 {
+  font-size: 15px;
+  line-height: 0.5;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+}
+h5 {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+}
+.card-body {
+  font-size: 12px;
+  font-weight: 100;
+  text-align: center;
+}
+header {
+  margin: 50px 5px 20px;
+  text-align: center;
+  padding: 20px 40px;
+  border-radius: 4px;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+.fa-cloud-sun {
+  color: orange;
+}
+
+.col-3 {
+  text-align: center;
+}
+
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -20px;
+}
