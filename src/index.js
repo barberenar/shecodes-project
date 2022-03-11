@@ -19,7 +19,7 @@ function searchCity(event) {
   let city = document.querySelector("#city");
   let cityInput = city.value;
   let cityTitle = document.querySelector("#city-title");
-  cityTitle.innerHTML = cityInput;
+  cityTitle.innerHTML = cityInput.charAt(0).toUpperCase() + cityInput.slice(1);
   let apiKey = "21475e7ebad3c82a3f3c6e1dfcd1aad7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=${apiKey}`;
   axios.get(apiUrl).then(showCityTemp);
