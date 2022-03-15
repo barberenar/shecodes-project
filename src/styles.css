@@ -55,3 +55,17 @@ header {
   position: relative;
   top: -20px;
 }
+a {
+  color: rgb(33, 33, 33);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.active {
+  color: blue;
+  text-decoration: underline;
+  font-weight: 300;
+}
+.active:hover {
+  cursor:pointer;
+}
