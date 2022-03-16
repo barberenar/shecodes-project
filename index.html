@@ -45,15 +45,23 @@
         </section>
         <header>
             <h4 id="time">Sunday, 10:00</h4>
-            <i class="fa-solid fa-cloud-sun"></i>
+            <img src="https://openweathermap.org/img/wn/04d@2x.png" id="icon" />
             <h1 class="title" id="city-title">
                 Managua
             </h1>
             <span class="temperature" id="temperature">19</span>
             <span class="units">
-                <a id="celsius-link">°C</a><small> | </small><a id="farenh-link" class="active">°F</a>
+                <a href="#" id="celsius-link" class="active">°C</a><small> | </small><a href="#" id="farenh-link">°F</a>
             </span>
         </header>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li id="description"></li>
+                    <li>Wind: <span id="wind"></span>km/hr</li>
+                </ul>
+            </div>
+        </div>
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-2">

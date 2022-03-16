@@ -14,30 +14,6 @@ let minutes = date.getMinutes();
 let dateTime = document.querySelector("#time");
 dateTime.innerHTML = `${day}, ${hour}:${minutes}`;
 
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(searchCurrentCity);
-}
-
-function searchCurrentCity(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = "21475e7ebad3c82a3f3c6e1dfcd1aad7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(showCityTemp);
-}
-
-function searchCity(event) {
-  event.preventDefault();
-  let city = document.querySelector("#city");
-  let cityInput = city.value;
-  //let cityTitle = document.querySelector("#city-title");
-  //cityTitle.innerHTML = cityInput.charAt(0).toUpperCase() + cityInput.slice(1);
-  let apiKey = "21475e7ebad3c82a3f3c6e1dfcd1aad7";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=metric&appid=${apiKey}`;
-  axios.get(apiUrl).then(showCityTemp);
-}
-
 function showCityTemp(response) {
   celsiusTemp = response.data.main.temp;
   let temp = Math.round(celsiusTemp);
@@ -46,30 +22,70 @@ function showCityTemp(response) {
   let city = response.data.name;
   let cityTitle = document.querySelector("#city-title");
   cityTitle.innerHTML = city;
+  let description = response.data.weather[0].description;
+  let descriptionText = document.querySelector("#description");
+  descriptionText.innerHTML = description.charAt(0).toUpperCase() + description.slice(1);
+  let wind = Math.round(response.data.wind.speed);
+  let windText = document.querySelector("#wind");
+  windText.innerHTML = wind;
+  let icon = document.querySelector("#icon");
+  icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    celsiusLink.classList.add("active");
+  farenhLink.classList.remove("active");
 }
+
+
+function searchCurrentCity(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(showCityTemp);
+}
+
+function getCurrentPosition(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchCurrentCity);
+}
+
+function searchCity(city) {
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+  axios.get(apiUrl).then(showCityTemp);
+  
+  
+}
+
+function getCity(event) {
+  event.preventDefault();
+  let city = document.querySelector("#city");
+  searchCity(city.value);
+}
+
+
 function tempToFarenh(event) {
   let farenhTemp = (celsiusTemp * 9 / 5) + 32;
   let temp = Math.round(farenhTemp);
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = temp;
-  farenhLink.classList.remove("active");
-  celsiusLink.classList.add("active");
+  farenhLink.classList.add("active");
+  celsiusLink.classList.remove("active");
 }
 
 function tempToCelsius(event) {
   let temp = Math.round(celsiusTemp);
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = temp;
-  celsiusLink.classList.remove("active");
-  farenhLink.classList.add("active");
+  celsiusLink.classList.add("active");
+  farenhLink.classList.remove("active");
 }
 
 let celsiusTemp = null;
+let apiKey = "21475e7ebad3c82a3f3c6e1dfcd1aad7";
 let searchButton = document.querySelector("#search");
-searchButton.addEventListener("click", searchCity);
+searchButton.addEventListener("click", getCity);
 let geoButton = document.querySelector("#geoTarget");
 geoButton.addEventListener("click", getCurrentPosition);
 let farenhLink = document.querySelector("#farenh-link");
 farenhLink.addEventListener("click", tempToFarenh);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", tempToCelsius);
+searchCity("Managua");
