@@ -14,6 +14,36 @@ let minutes = date.getMinutes();
 let dateTime = document.querySelector("#time");
 dateTime.innerHTML = `${day}, ${hour}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = [
+  "Sun",
+  "Mon",
+  "Tue",
+  "Wed",
+  "Thu",
+  "Fri",
+  "Sat"
+  ];
+      let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `<div class="col-2">
+
+                <div>
+                    <h5 class="forecast-day" id="day-one">${day}</h5>
+                    <div><img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Forecast Icon" width="40px"
+                            id="icon-day-one" /></div>
+                    <span class="forecast-temp-max" id="temp-max-day-one">32° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">22°
+                    </span>
+                </div>
+            </div>`;
+  });
+  forecastElement.innerHTML = forecastHTML;
+}
+
+
 function showCityTemp(response) {
   celsiusTemp = response.data.main.temp;
   let temp = Math.round(celsiusTemp);
@@ -89,3 +119,4 @@ farenhLink.addEventListener("click", tempToFarenh);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", tempToCelsius);
 searchCity("Managua");
+displayForecast();
