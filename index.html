@@ -37,7 +37,7 @@
                     </div>
                     <div class="col-3">
                         <button type="submit" class="btn btn-success btn-block" id="geoTarget">
-                            Current City
+                            Current
                         </button>
                     </div>
                 </div>
@@ -45,77 +45,96 @@
         </section>
         <header>
             <h4 id="time">Sunday, 10:00</h4>
-            <img src="https://openweathermap.org/img/wn/04d@2x.png" id="icon" />
-            <h1 class="title" id="city-title">
-                Managua
-            </h1>
-            <span class="temperature" id="temperature">19</span>
-            <span class="units">
-                <a href="#" id="celsius-link" class="active">°C</a><small> | </small><a href="#" id="farenh-link">°F</a>
-            </span>
+            <div class="row">
+                <div class="col-4">
+                    <h1 class="title" id="city-title">
+                        Managua
+                    </h1>
+                </div>
+                <div class="col-4">
+                    <img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon" id="icon" width="50%" />
+                </div>
+                <div class="col-4">
+                    <span class="temperature" id="temperature">19</span>
+                    <span class="units">
+                        <a href="#" id="celsius-link" class="active">°C</a><small> | </small><a href="#"
+                            id="farenh-link">°F</a>
+                    </span>
+                </div>
+
+            </div>
+
+
         </header>
+
+        <div class="col-6 description">
+            <ul>
+                <li id="description"></li>
+                <li>Wind: <span id="wind"></span>km/hr</li>
+            </ul>
+        </div>
+        <hr />
         <div class="row">
-            <div class="col-6">
-                <ul>
-                    <li id="description"></li>
-                    <li>Wind: <span id="wind"></span>km/hr</li>
-                </ul>
+            <div class="col-2">
+
+                <div>
+                    <h5 class="forecast-day" id="day-one">Mon</h5>
+                    <div><img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Forecast Icon" width="40px"
+                            id="icon-day-one" /></div>
+                    <span class="forecast-temp-max" id="temp-max-day-one">32° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">22°
+                    </span>
+                </div>
+            </div>
+            <div class="col-2">
+
+                <div>
+                    <h5 class="forecast-day" id="day-one">Mon</h5>
+                    <div><img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Forecast Icon" width="40px"
+                            id="icon-day-one" /></div>
+                    <span class="forecast-temp-max" id="temp-max-day-one">32° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">22°
+                    </span>
+                </div>
+            </div>
+            <div class="col-2">
+
+                <div>
+                    <h5 class="forecast-day" id="day-one">Mon</h5>
+                    <div><img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Forecast Icon" width="40px"
+                            id="icon-day-one" /></div>
+                    <span class="forecast-temp-max" id="temp-max-day-one">32° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">22°
+                    </span>
+                </div>
+            </div>
+            <div class="col-2">
+
+                <div>
+                    <h5 class="forecast-day" id="day-one">Mon</h5>
+                    <div><img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Forecast Icon" width="40px"
+                            id="icon-day-one" /></div>
+                    <span class="forecast-temp-max" id="temp-max-day-one">32° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">22°
+                    </span>
+                </div>
+            </div>
+            <div class="col-2">
+
+                <div>
+                    <h5 class="forecast-day" id="day-one">Mon</h5>
+                    <div><img src="https://openweathermap.org/img/wn/04d@2x.png" alt="Forecast Icon" width="40px"
+                            id="icon-day-one" /></div>
+                    <span class="forecast-temp-max" id="temp-max-day-one">32° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">22°
+                    </span>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Mon</h5>
-                        <i class="fa-solid fa-sun"></i>
-                        <p class="card-text">32°</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Tue</h5>
-                        <i class="fa-solid fa-sun"></i>
-                        <p class="card-text">32°</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Wed</h5>
-                        <i class="fa-solid fa-sun"></i>
-                        <p class="card-text">33°</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Thu</h5>
-                        <i class="fa-solid fa-cloud"></i>
-                        <p class="card-text">33°</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Fri</h5>
-                        <i class="fa-solid fa-cloud"></i>
-                        <p class="card-text">32°</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-1"></div>
-        </div>
-        <div>
+        <div id="github">
             <hr />
-            <p><br /><small><a href="https://github.com/barberenar/shecodes-project">Open-source code</a> by Roberta
-                    Barberena</small>
-            </p>
+            <br /><a href="https://github.com/barberenar/shecodes-project">Open-source code</a> by Roberta
+            Barberena
         </div>
     </div>
     <script src="src/index.js"></script>

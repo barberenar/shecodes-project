@@ -1,36 +1,45 @@
+body {
+background-color:#8470B0;  
+  
+}
+
 h1,
 h2,
 h3,
-h4 {
+h4, #temperature {
   font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
 }
-h1 {
+h1, #temperature {
   font-size: 50px;
+      margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
 }
 h4 {
   font-size: 15px;
   line-height: 0.5;
   font-weight: 100;
   font-style: italic;
-  text-align: center;
+  text-align: left;
 }
 h5 {
   font-size: 12px;
   font-weight: 100;
   text-align: center;
 }
-.card-body {
-  font-size: 12px;
-  font-weight: 100;
-  text-align: center;
-}
+
 header {
-  margin: 50px 5px 20px;
+  margin: 50px 5px 0px;
   text-align: center;
-  padding: 20px 40px;
   border-radius: 4px;
 }
+
+.description {
+  margin: 0 5px 10px;
+}
+
 
 ul {
   margin: 0;
@@ -40,17 +49,56 @@ ul {
 li {
   list-style: none;
 }
+
+.forecast-day {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.forecast-temp-max {
+  color: black;
+  font-size: 13px;
+  font-weight: 600;
+}
+.forecast-temp-min {
+  color: rgb(79, 96, 102);
+  font-size: 13px;
+  font-weight: 600;
+}
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px 20px;
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 10px 10% 20px 10%;
+  border-radius: 10px;
+  background-color: white;
 }
 .fa-cloud-sun {
   color: orange;
 }
 
+
+
+.col-2 {
+  text-align: center;
+  border: none;
+  padding: 5px 0;
+  margin: 5px 0;
+    width: 20%;
+}
+
 .col-3 {
   text-align: center;
+  padding: 0px;
+  margin: 0px;
+  flex: 0 0 auto;
+    width: 15%;
+}
+
+
+
+.col-6 {
+    width: 70%;
 }
 
 .temperature {
@@ -62,7 +110,7 @@ li {
 
 .units {
   position: relative;
-  top: -20px;
+  top: -25px;
 }
 
 .active {
@@ -77,4 +125,36 @@ li {
   cursor: default;
   text-decoration: none;
   font-weight: 500;
+}
+
+.btn {
+  padding: .375rem .90rem;
+}
+
+.btn-primary {
+  font-family: "Open Sans Condensed", sans-serif;
+    color: #fff;
+    background-color: #8470B0;  
+    border-color: #8470B0;
+}
+.btn-success {
+  font-family: "Open Sans Condensed", sans-serif;
+    color: #fff;
+    background-color: #3D7CE1;
+    border-color: #3D7CE1;
+}
+
+.btn-success:hover{
+  opacity: 0.5;
+  background-color: #3D7CE1;
+  border-color: #3D7CE1;
+}
+
+.btn-primary:hover {
+    opacity: 0.5;
+    background-color: #8470B0;
+    border-color: #8470B0;
+}
+#github {
+font-size: 12px;
 }
