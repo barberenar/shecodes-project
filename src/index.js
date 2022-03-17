@@ -46,8 +46,8 @@ function displayForecast(response) {
                     <h5 class="forecast-day" id="day-one">${formatDate(forecastDay.dt)}</h5>
                     <div><img src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" alt="Forecast Icon" width="40px"
                             id="icon-day-one" /></div>
-                    <span class="forecast-temp-max" id="temp-max-day-one">${Math.round(forecastDay.temp.max)} </span><span class="forecast-temp-min"
-                        id="temp-min-day-one">${Math.round(forecastDay.temp.min)}
+                    <span class="forecast-temp-max" id="temp-max-day-one">${Math.round(forecastDay.temp.max)}° </span><span class="forecast-temp-min"
+                        id="temp-min-day-one">${Math.round(forecastDay.temp.min)}°
                     </span>
                 </div>
             </div>`;

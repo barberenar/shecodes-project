@@ -52,24 +52,24 @@ li {
 
 .forecast-day {
   color: black;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 .forecast-temp-max {
   color: black;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 .forecast-temp-min {
   color: rgb(79, 96, 102);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
 }
 .container {
   max-width: 800px;
   margin: 50px auto;
-  padding: 10px 10% 20px 10%;
+  padding: 10px 7% 20px 7%;
   border-radius: 10px;
   background-color: white;
 }
@@ -94,7 +94,9 @@ li {
     width: 15%;
 }
 
-
+#forecast {
+  margin: 20px 0px;
+}
 
 .col-6 {
     width: 70%;
