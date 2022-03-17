@@ -26,7 +26,12 @@ function formatDate(timestamp) {
   "Fri",
   "Sat"
   ];
-  return days[day];
+  if (day == 6) {
+    return days[0];
+  }
+  else {
+    return days[day+1];
+  }
 }
 
 function displayForecast(response) {
@@ -34,7 +39,7 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
       let forecastHTML = "";
   forecast.forEach(function (forecastDay, index) {
-    if (index < 7) {
+    if (index < 6) {
       forecastHTML = forecastHTML + `<div class="col-2">
 
                 <div>
