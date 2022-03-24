@@ -1,21 +1,22 @@
 body {
-background-color:#8470B0;  
-  
+  background-color: #8470b0;
 }
 
 h1,
 h2,
 h3,
-h4, #temperature {
+h4,
+#temperature {
   font-family: "Open Sans Condensed", sans-serif;
   text-align: center;
 }
-h1, #temperature {
+h1,
+#temperature {
   font-size: 50px;
-      margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
 }
 h4 {
   font-size: 15px;
@@ -39,7 +40,6 @@ header {
 .description {
   margin: 0 5px 10px;
 }
-
 
 ul {
   margin: 0;
@@ -77,8 +77,6 @@ li {
   color: orange;
 }
 
-
-
 .col-2 {
   text-align: center;
   border: none;
@@ -91,7 +89,7 @@ li {
   padding: 0px;
   margin: 0px;
   flex: 0 0 auto;
-    width: 15%;
+  width: 15%;
 }
 
 #forecast {
@@ -99,7 +97,7 @@ li {
 }
 
 .col-6 {
-    width: 70%;
+  width: 70%;
 }
 
 .temperature {
@@ -129,33 +127,34 @@ li {
 }
 
 .btn {
-  padding: .375rem .90rem;
+  padding: 0.375rem 0.9rem;
 }
 
 .btn-primary {
   font-family: "Open Sans Condensed", sans-serif;
-    color: #fff;
-    background-color: #8470B0;  
-    border-color: #8470B0;
+  color: #fff;
+  background-color: #8470b0;
+  border-color: #8470b0;
 }
 .btn-success {
   font-family: "Open Sans Condensed", sans-serif;
-    color: #fff;
-    background-color: #3D7CE1;
-    border-color: #3D7CE1;
+  color: #fff;
+  background-color: #3d7ce1;
+  border-color: #3d7ce1;
 }
 
-.btn-success:hover{
+.btn-success:hover {
   opacity: 0.5;
-  background-color: #3D7CE1;
-  border-color: #3D7CE1;
+  background-color: #3d7ce1;
+  border-color: #3d7ce1;
 }
 
 .btn-primary:hover {
-    opacity: 0.5;
-    background-color: #8470B0;
-    border-color: #8470B0;
+  opacity: 0.5;
+  background-color: #8470b0;
+  border-color: #8470b0;
 }
 #github {
-font-size: 12px;
+  font-size: 12px;
+  margin: 10px auto;
 }
